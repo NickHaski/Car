@@ -19,7 +19,7 @@ public class CarConrtoller {
 
 	String message = "Welcome to Spring MVC!";
 	 
-	@RequestMapping(path="/hello",  method=RequestMethod.GET)
+	@RequestMapping(value={"/","/hello"},  method=RequestMethod.GET)
 	public ModelAndView showMessage(
 			@ModelAttribute Car car) {
 		System.out.println("in controller");
@@ -31,12 +31,20 @@ public class CarConrtoller {
 	}
 	
 	
-	@RequestMapping(method=RequestMethod.POST)
-	public ModelAndView setCar(@ModelAttribute("car") Car car, BindingResult result, Model model){
-		final ModelAndView modelAndView = new ModelAndView("index");
-		//modelAndView.addObject("name",);
-		return modelAndView;
-	}
+//	@RequestMapping(method = RequestMethod.GET)
+//	public ModelAndView setCar(@ModelAttribute("car") Car car, BindingResult result, Model model){
+//		final ModelAndView modelAndView = new ModelAndView("index");
+//		return modelAndView;
+//	}
+//	
 	
+	@RequestMapping(value="/admin**", method=RequestMethod.GET)
+	public ModelAndView getAdmin(){
+		final ModelAndView model = new ModelAndView("admin");
+		model.addObject("title", "Spring Security Hello World");
+		model.addObject("message", "This is protected page!");
+		model.setViewName("admin");
+		return model;
+	}
 	
 }

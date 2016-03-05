@@ -8,10 +8,8 @@ pageEncoding="ISO-8859-1"%>
 <title>Spring 4 MVC - HelloWorld Index Page</title>
 </head>
 <body>
-
 	<center>
-		<h2>Hello 22  World</h2>
-		
+		<h2>User who have access and credentials</h2>
 	</center>
 </body>
 </html>
