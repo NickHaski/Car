@@ -7,11 +7,45 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>car</name>
 	<url>http://maven.apache.org</url>
-	
+
 	<properties>
-	<jdk.version>1.6</jdk.version>
+		<jdk.version>1.6</jdk.version>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>19.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>4.2.5.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>4.2.5.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-expression</artifactId>
+			<version>4.2.4.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.18</version>
+		</dependency>
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.1-901.jdbc4</version>
+		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -57,7 +91,7 @@
 	<build>
 		<finalName>Car</finalName>
 		<plugins>
-		
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -79,15 +113,15 @@
 				</configuration>
 			</plugin>
 			<plugin>
-	             <groupId>org.apache.maven.plugins</groupId>
-	             <artifactId>maven-war-plugin</artifactId>
-	             <configuration>
-	                <failOnMissingWebXml>false</failOnMissingWebXml>
-	             </configuration>
-	             <version>2.5</version>
-	        </plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+				<version>2.5</version>
+			</plugin>
 		</plugins>
 	</build>
-	
-	
+
+
 </project>
